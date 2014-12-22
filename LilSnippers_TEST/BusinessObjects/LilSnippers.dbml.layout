@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 18.25" name="LilSnippers">
+  <DataContextMoniker Name="/LilSnippersDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1dc682a6-194f-4dd4-af00-0dfe8246e43a" absoluteBounds="9.25, 14.125, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/LilSnippersDataContext/Clients" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0067a297-038b-499d-91cb-51845700e75d" absoluteBounds="9.265, 14.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10a55623-aabf-4744-b8c4-3b6bde9af680" absoluteBounds="3.75, 16.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LilSnippersDataContext/Countries" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b0bf34f-6a30-44b0-bc9a-2a68ae20f9fa" absoluteBounds="3.765, 17.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="daa66864-9892-4ea3-9026-07e6bd01d596" absoluteBounds="3.5, 4.375, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/LilSnippersDataContext/Employees" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd47c155-33d3-4f6c-a13a-5ccafdecd990" absoluteBounds="3.515, 4.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b1be800-8930-4c99-a991-4b2e218cc1e4" absoluteBounds="0.75, 5.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LilSnippersDataContext/EmpPositions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34d7cef0-13ec-423d-8240-238c9026d147" absoluteBounds="0.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72e011cc-0e59-4137-a3fd-f8a0992d4a88" absoluteBounds="0.75, 7.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LilSnippersDataContext/HearAbouts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7199a745-465c-4515-a1fc-c47050101805" absoluteBounds="0.765, 8.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69500663-a870-4484-94ee-ffc4160615c2" absoluteBounds="3.5, 9, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/LilSnippersDataContext/HomeAddress" />
+      <nestedChildShapes>
+        <elementListCompartment Id="067a00ad-7bfc-49c1-a222-6013841fd84a" absoluteBounds="3.515, 9.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35765626-2e41-474a-a8c7-143178bca2ef" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/LilSnippersDataContext/Media" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23302f7c-f9b2-441e-8fcd-921f83b4dfdc" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ee48c56-85ef-43f9-872e-2006401a3550" absoluteBounds="0.75, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LilSnippersDataContext/MediaType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f2c5731-4f56-4e67-9535-fee85a431ae0" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87e661a7-8389-42f5-a07d-7b7ed0c3df10" absoluteBounds="6.5, 3.375, 2, 1.193992513020834">
+      <DataClassMoniker Name="/LilSnippersDataContext/Month" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f45081e-cb4d-42d9-8f42-eddd491e081a" absoluteBounds="6.515, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3a33972-2f4a-4db5-81ed-619618d75a34" absoluteBounds="6.25, 13.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LilSnippersDataContext/ParentGuardians" />
+      <nestedChildShapes>
+        <elementListCompartment Id="01cd36c4-9f4a-4b2d-9870-4cb37b8c41b8" absoluteBounds="6.265, 13.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f82220bf-6af5-4945-963e-92a038f21dd3" absoluteBounds="12.25, 6.5, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/LilSnippersDataContext/Products" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c57909e-c244-4f0c-9d8d-b44fce93c033" absoluteBounds="12.265, 6.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8371a2e-f833-4923-addf-8ce487d06f5d" absoluteBounds="9.5, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LilSnippersDataContext/ProductTypes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f699ab7-7616-453f-8aad-cce61d893b0c" absoluteBounds="9.515, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61585f50-ba6e-4ca5-a3af-da8701a0a097" absoluteBounds="0.75, 9.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LilSnippersDataContext/States" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb2f24d2-f65d-43ea-a3f3-dc467e3b34c0" absoluteBounds="0.765, 10.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1686f257-475d-4309-baa1-47b575200c94" absoluteBounds="6.25, 5.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/LilSnippersDataContext/StylistTimes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3cedfbb-1c2a-4013-bd94-eefe83c7ee39" absoluteBounds="6.265, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db8a2e58-51e1-4a28-802f-e749c1b3be3f" absoluteBounds="6.5, 8.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/LilSnippersDataContext/Suppliers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="964ff6c7-b0ff-4dc9-817d-d41eb55f84d5" absoluteBounds="6.515, 9.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.59699625651042); (3.5 : 1.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/MediaType/MediaType_Media" />
+      <nodes>
+        <classShapeMoniker Id="3ee48c56-85ef-43f9-872e-2006401a3550" />
+        <classShapeMoniker Id="35765626-2e41-474a-a8c7-143178bca2ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 11.5401025390625); (4.5 : 15.8069477421875); (9.25 : 15.8069477421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/HomeAddress/HomeAddress_Clients" />
+      <nodes>
+        <classShapeMoniker Id="69500663-a870-4484-94ee-ffc4160615c2" />
+        <classShapeMoniker Id="1dc682a6-194f-4dd4-af00-0dfe8246e43a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.34699625651042); (3.04166666666667 : 6.34699625651042 : JumpStart); (3.20833333333333 : 6.34699625651042 : JumpEnd); (3.5 : 6.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/EmpPositions/EmpPositions_Employees" />
+      <nodes>
+        <classShapeMoniker Id="9b1be800-8930-4c99-a991-4b2e218cc1e4" />
+        <classShapeMoniker Id="daa66864-9892-4ea3-9026-07e6bd01d596" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.75); (3.125 : 9.375); (3.125 : 5.32974612825521); (3.5 : 5.32974612825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/States/States_Employees" />
+      <nodes>
+        <classShapeMoniker Id="61585f50-ba6e-4ca5-a3af-da8701a0a097" />
+        <classShapeMoniker Id="daa66864-9892-4ea3-9026-07e6bd01d596" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.9118455607472); (3.28125 : 9.4430955607472); (3.28125 : 8.77971253846154); (4.20923076923077 : 9)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/HearAbouts/HearAbouts_HomeAddress" />
+      <nodes>
+        <classShapeMoniker Id="72e011cc-0e59-4137-a3fd-f8a0992d4a88" />
+        <classShapeMoniker Id="69500663-a870-4484-94ee-ffc4160615c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.3782487565104); (3.5 : 10.3782487565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/States/States_HomeAddress" />
+      <nodes>
+        <classShapeMoniker Id="61585f50-ba6e-4ca5-a3af-da8701a0a097" />
+        <classShapeMoniker Id="69500663-a870-4484-94ee-ffc4160615c2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.9687475 : 11.5401025390625); (3.9687475 : 14.2892976888021); (4.41666666666667 : 14.2892976888021 : JumpStart); (4.58333333333333 : 14.2892976888021 : JumpEnd); (5.57291666666667 : 14.2892976888021 : JumpStart); (5.73958333333333 : 14.2892976888021 : JumpEnd); (6.25 : 14.2892976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/HomeAddress/HomeAddress_ParentGuardians" />
+      <nodes>
+        <classShapeMoniker Id="69500663-a870-4484-94ee-ffc4160615c2" />
+        <classShapeMoniker Id="f3a33972-2f4a-4db5-81ed-619618d75a34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.28125 : 5.94399251302083); (11.28125 : 9.12304681640625); (12.25 : 9.12304681640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/ProductTypes/ProductTypes_Products" />
+      <nodes>
+        <classShapeMoniker Id="c8371a2e-f833-4923-addf-8ce487d06f5d" />
+        <classShapeMoniker Id="f82220bf-6af5-4945-963e-92a038f21dd3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 9.79250325520833); (12.25 : 9.79250325520833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Suppliers/Suppliers_Products" />
+      <nodes>
+        <classShapeMoniker Id="db8a2e58-51e1-4a28-802f-e749c1b3be3f" />
+        <classShapeMoniker Id="f82220bf-6af5-4945-963e-92a038f21dd3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.31814697265625); (6.25 : 6.31814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Employees/Employees_StylistTimes" />
+      <nodes>
+        <classShapeMoniker Id="daa66864-9892-4ea3-9026-07e6bd01d596" />
+        <classShapeMoniker Id="1686f257-475d-4309-baa1-47b575200c94" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 16.75); (5.65625 : 11.7348046875); (6.5 : 11.7348046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Countries/Countries_Suppliers" />
+      <nodes>
+        <classShapeMoniker Id="10a55623-aabf-4744-b8c4-3b6bde9af680" />
+        <classShapeMoniker Id="db8a2e58-51e1-4a28-802f-e749c1b3be3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 10.9439925130208); (1.75 : 11.6374511132812); (4.41666666666667 : 11.6374511132812 : JumpStart); (4.58333333333333 : 11.6374511132812 : JumpEnd); (6.5 : 11.6374511132812)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/States/States_Suppliers" />
+      <nodes>
+        <classShapeMoniker Id="61585f50-ba6e-4ca5-a3af-da8701a0a097" />
+        <classShapeMoniker Id="db8a2e58-51e1-4a28-802f-e749c1b3be3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 4.56899251302083); (7.5 : 5.375); (8.75 : 5.375); (8.75 : 15.2989005533854); (9.25 : 15.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Month/Month_Clients" />
+      <nodes>
+        <classShapeMoniker Id="87e661a7-8389-42f5-a07d-7b7ed0c3df10" />
+        <classShapeMoniker Id="1dc682a6-194f-4dd4-af00-0dfe8246e43a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a566f643-af25-4a7f-96fb-b1fe435b2b2b" absoluteBounds="9, 6.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LilSnippersDataContext/Transactions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33310ac9-2f63-4adc-bbdc-9db60f4afe50" absoluteBounds="9.015, 7.3350000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 7.66750325520833); (8.66666666666667 : 7.66750325520833 : JumpStart); (8.83333333333333 : 7.66750325520833 : JumpEnd); (9 : 7.66750325520833)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Employees/Employees_Transactions" />
+      <nodes>
+        <classShapeMoniker Id="daa66864-9892-4ea3-9026-07e6bd01d596" />
+        <classShapeMoniker Id="a566f643-af25-4a7f-96fb-b1fe435b2b2b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9); (4.5 : 8.51121256510417); (5.75 : 8.51121256510417); (5.75 : 8.09180131640625); (8.66666666666667 : 8.09180131640625 : JumpStart); (8.83333333333333 : 8.09180131640625 : JumpEnd); (9 : 8.09180131640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/HomeAddress/HomeAddress_Transactions" />
+      <nodes>
+        <classShapeMoniker Id="69500663-a870-4484-94ee-ffc4160615c2" />
+        <classShapeMoniker Id="a566f643-af25-4a7f-96fb-b1fe435b2b2b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="aac2f246-a97a-44fd-8e29-2db5eae9d2a0" absoluteBounds="13.125, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LilSnippersDataContext/ServiceS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b716df77-fbd3-4787-8211-f8dcb7d9fa97" absoluteBounds="13.14, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1afe8fca-3826-4580-a312-1ca394e746cc" absoluteBounds="15.75, 9.375, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LilSnippersDataContext/Transaction_Detail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b516e38b-2df5-4639-aa87-4d4029e20255" absoluteBounds="15.765, 9.835, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.25 : 9.78445556640625); (14.6354166666667 : 9.78445556640625 : JumpStart); (14.8020833333333 : 9.78445556640625 : JumpEnd); (15.75 : 9.78445556640625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Products/Products_Transaction_Detail" />
+      <nodes>
+        <classShapeMoniker Id="f82220bf-6af5-4945-963e-92a038f21dd3" />
+        <classShapeMoniker Id="1afe8fca-3826-4580-a312-1ca394e746cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 8.45359537760417); (10 : 10.6879068424479); (14.6354166666667 : 10.6879068424479 : JumpStart); (14.8020833333333 : 10.6879068424479 : JumpEnd); (15.75 : 10.6879068424479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/Transactions/Transactions_Transaction_Detail" />
+      <nodes>
+        <classShapeMoniker Id="a566f643-af25-4a7f-96fb-b1fe435b2b2b" />
+        <classShapeMoniker Id="1afe8fca-3826-4580-a312-1ca394e746cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.71875 : 5.3862939453125); (14.71875 : 11.428907906901); (15.75 : 11.428907906901)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LilSnippersDataContext/ServiceS/ServiceS_Transaction_Detail" />
+      <nodes>
+        <classShapeMoniker Id="aac2f246-a97a-44fd-8e29-2db5eae9d2a0" />
+        <classShapeMoniker Id="1afe8fca-3826-4580-a312-1ca394e746cc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

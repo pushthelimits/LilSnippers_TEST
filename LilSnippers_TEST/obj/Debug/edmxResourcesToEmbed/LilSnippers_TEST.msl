@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LilSnippers_TESTStoreContainer" CdmEntityContainer="LilSnippers_TESTEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientFirstName" ColumnName="ClientFirstName" />
+          <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+          <ScalarProperty Name="MonthID" ColumnName="MonthID" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+          <ScalarProperty Name="HaircutNotes" ColumnName="HaircutNotes" />
+          <ScalarProperty Name="HomeAddressID" ColumnName="HomeAddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Country1" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmpFirstName" ColumnName="EmpFirstName" />
+          <ScalarProperty Name="EmpLastName" ColumnName="EmpLastName" />
+          <ScalarProperty Name="EmpAddress1" ColumnName="EmpAddress1" />
+          <ScalarProperty Name="EmpAddress2" ColumnName="EmpAddress2" />
+          <ScalarProperty Name="EmpCity" ColumnName="EmpCity" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="EmpZIP" ColumnName="EmpZIP" />
+          <ScalarProperty Name="EmpPhone" ColumnName="EmpPhone" />
+          <ScalarProperty Name="EmpEmail" ColumnName="EmpEmail" />
+          <ScalarProperty Name="EmpBirthDate" ColumnName="EmpBirthDate" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="HourlyWage" ColumnName="HourlyWage" />
+          <ScalarProperty Name="TaxStatus" ColumnName="TaxStatus" />
+          <ScalarProperty Name="NumExemptions" ColumnName="NumExemptions" />
+          <ScalarProperty Name="EmpPositionID" ColumnName="EmpPositionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpPositions">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.EmpPosition">
+        <MappingFragment StoreEntitySet="EmpPosition">
+          <ScalarProperty Name="EmpPositionID" ColumnName="EmpPositionID" />
+          <ScalarProperty Name="EmpPosition1" ColumnName="EmpPosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HearAbouts">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.HearAbout">
+        <MappingFragment StoreEntitySet="HearAbout">
+          <ScalarProperty Name="HearAboutID" ColumnName="HearAboutID" />
+          <ScalarProperty Name="HearAbout1" ColumnName="HearAbout" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeAddresses">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.HomeAddress">
+        <MappingFragment StoreEntitySet="HomeAddress">
+          <ScalarProperty Name="HomeAddressID" ColumnName="HomeAddressID" />
+          <ScalarProperty Name="HomeAddress1" ColumnName="HomeAddress1" />
+          <ScalarProperty Name="HomeAddress2" ColumnName="HomeAddress2" />
+          <ScalarProperty Name="HomeCity" ColumnName="HomeCity" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="HomeZIP" ColumnName="HomeZIP" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="HomeEmail" ColumnName="HomeEmail" />
+          <ScalarProperty Name="HearAboutID" ColumnName="HearAboutID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Media">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Medium">
+        <MappingFragment StoreEntitySet="Media">
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="MediaTitle" ColumnName="MediaTitle" />
+          <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaTypes">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.MediaType">
+        <MappingFragment StoreEntitySet="MediaType">
+          <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
+          <ScalarProperty Name="MediaType1" ColumnName="MediaType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Month1">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Month1">
+        <MappingFragment StoreEntitySet="Month">
+          <ScalarProperty Name="MonthID" ColumnName="MonthID" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParentGuardians">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.ParentGuardian">
+        <MappingFragment StoreEntitySet="ParentGuardian">
+          <ScalarProperty Name="ParentGuardianID" ColumnName="ParentGuardianID" />
+          <ScalarProperty Name="ParentFirstName" ColumnName="ParentFirstName" />
+          <ScalarProperty Name="ParentLastName" ColumnName="ParentLastName" />
+          <ScalarProperty Name="HomeAddressID" ColumnName="HomeAddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="CostPerEach" ColumnName="CostPerEach" />
+          <ScalarProperty Name="NoPerPack" ColumnName="NoPerPack" />
+          <ScalarProperty Name="CostPerPack" ColumnName="CostPerPack" />
+          <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+          <ScalarProperty Name="QtyOnHand" ColumnName="QtyOnHand" />
+          <ScalarProperty Name="PhysicalCount" ColumnName="PhysicalCount" />
+          <ScalarProperty Name="QtyOnOrder" ColumnName="QtyOnOrder" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductTypes">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.ProductType">
+        <MappingFragment StoreEntitySet="ProductType">
+          <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
+          <ScalarProperty Name="ProductType1" ColumnName="ProductType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="State1" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StylistTimes">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.StylistTime">
+        <MappingFragment StoreEntitySet="StylistTimes">
+          <ScalarProperty Name="StylistTimeID" ColumnName="StylistTimeID" />
+          <ScalarProperty Name="TimeMinutes" ColumnName="TimeMinutes" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaction_Details">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Transaction_Details">
+        <MappingFragment StoreEntitySet="Transaction_Details">
+          <ScalarProperty Name="UniqueID" ColumnName="UniqueID" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="ClientFirstName" ColumnName="ClientFirstName" />
+          <ScalarProperty Name="ClientLastName" ColumnName="ClientLastName" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="ServiceQuantity" ColumnName="ServiceQuantity" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transactions">
+      <EntityTypeMapping TypeName="LilSnippers_TEST.Transaction">
+        <MappingFragment StoreEntitySet="Transactions">
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="HomeAddressID" ColumnName="HomeAddressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="LilSnippers_TEST.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="LilSnippers_TEST.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="LilSnippers_TEST.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="LilSnippers_TEST.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LilSnippers_TEST.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="LilSnippers_TEST.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LilSnippers_TEST.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="LilSnippers_TEST.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="LilSnippers_TEST.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

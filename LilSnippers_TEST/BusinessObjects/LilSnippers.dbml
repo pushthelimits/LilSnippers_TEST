@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LilSnippers" Class="LilSnippersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BEATRICE\SQLEXPRESS;Initial Catalog=LilSnippers_TEST;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LilSnippers_TESTConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Client" Member="Clients">
+    <Type Name="Clients">
+      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClientLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MonthID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BirthYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HaircutNotes" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HomeAddressID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HomeAddress_Clients" Member="HomeAddress" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="HomeAddress" IsForeignKey="true" />
+      <Association Name="Month_Clients" Member="Month" ThisKey="MonthID" OtherKey="MonthID" Type="Month" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="Countries">
+    <Type Name="Countries">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Country" Member="Country1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Countries_Suppliers" Member="Suppliers" ThisKey="CountryID" OtherKey="CountryID" Type="Suppliers" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employees">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpFirstName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EmpLastName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EmpAddress1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EmpAddress2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EmpCity" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmpZIP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EmpPhone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EmpEmail" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EmpBirthDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HireDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HourlyWage" Type="System.Decimal" DbType="Decimal(2,2)" CanBeNull="true" />
+      <Column Name="TaxStatus" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NumExemptions" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EmpPositionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employees_StylistTimes" Member="StylistTimes" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="StylistTimes" />
+      <Association Name="Employees_Transactions" Member="Transactions" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Transactions" />
+      <Association Name="EmpPositions_Employees" Member="EmpPositions" Storage="_EmpPosition" ThisKey="EmpPositionID" OtherKey="EmpPositionID" Type="EmpPositions" IsForeignKey="true" />
+      <Association Name="States_Employees" Member="States" Storage="_State" ThisKey="StateID" OtherKey="StateID" Type="States" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmpPosition" Member="EmpPositions">
+    <Type Name="EmpPositions">
+      <Column Name="EmpPositionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpPosition" Member="EmpPosition1" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="EmpPositions_Employees" Member="Employees" ThisKey="EmpPositionID" OtherKey="EmpPositionID" Type="Employees" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HearAbout" Member="HearAbouts">
+    <Type Name="HearAbouts">
+      <Column Name="HearAboutID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HearAbout" Member="HearAbout1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="HearAbouts_HomeAddress" Member="HomeAddresses" ThisKey="HearAboutID" OtherKey="HearAboutID" Type="HomeAddress" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HomeAddress" Member="HomeAddresses">
+    <Type Name="HomeAddress">
+      <Column Name="HomeAddressID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HomeAddress1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HomeAddress2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HomeCity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HomeZIP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HomeEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HearAboutID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HomeAddress_Clients" Member="Clients" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="Clients" />
+      <Association Name="HomeAddress_ParentGuardians" Member="ParentGuardians" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="ParentGuardians" />
+      <Association Name="HomeAddress_Transactions" Member="Transactions" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="Transactions" />
+      <Association Name="HearAbouts_HomeAddress" Member="HearAbouts" Storage="_HearAbout" ThisKey="HearAboutID" OtherKey="HearAboutID" Type="HearAbouts" IsForeignKey="true" />
+      <Association Name="States_HomeAddress" Member="States" Storage="_State" ThisKey="StateID" OtherKey="StateID" Type="States" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media" Member="Medias">
+    <Type Name="Media">
+      <Column Name="MediaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MediaTitle" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="MediaTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MediaType_Media" Member="MediaType" ThisKey="MediaTypeID" OtherKey="MediaTypeID" Type="MediaType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaType" Member="MediaTypes">
+    <Type Name="MediaType">
+      <Column Name="MediaTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MediaType" Member="MediaType1" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="MediaType_Media" Member="Medias" ThisKey="MediaTypeID" OtherKey="MediaTypeID" Type="Media" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Month" Member="Months">
+    <Type Name="Month">
+      <Column Name="MonthID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MonthName" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="Month_Clients" Member="Clients" ThisKey="MonthID" OtherKey="MonthID" Type="Clients" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParentGuardian" Member="ParentGuardians">
+    <Type Name="ParentGuardians">
+      <Column Name="ParentGuardianID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParentLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HomeAddressID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HomeAddress_ParentGuardians" Member="HomeAddress" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="HomeAddress" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Products">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemNo" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CostPerEach" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="NoPerPack" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CostPerPack" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="RetailPrice" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="QtyOnHand" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PhysicalCount" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="QtyOnOrder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ReorderLevel" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProductTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Products_Transaction_Detail" Member="Transaction_Details" ThisKey="ProductID,ItemNo" OtherKey="ProductID,ItemNo" Type="Transaction_Detail" />
+      <Association Name="ProductTypes_Products" Member="ProductTypes" Storage="_ProductType" ThisKey="ProductTypeID" OtherKey="ProductTypeID" Type="ProductTypes" IsForeignKey="true" />
+      <Association Name="Suppliers_Products" Member="Suppliers" Storage="_Supplier" ThisKey="SupplierID" OtherKey="SupplierID" Type="Suppliers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductType" Member="ProductTypes">
+    <Type Name="ProductTypes">
+      <Column Name="ProductTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductType" Member="ProductType1" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="ProductTypes_Products" Member="Products" ThisKey="ProductTypeID" OtherKey="ProductTypeID" Type="Products" />
+    </Type>
+  </Table>
+  <Table Name="dbo.State" Member="States">
+    <Type Name="States">
+      <Column Name="StateID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="State" Member="State1" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="States_Employees" Member="Employees" ThisKey="StateID" OtherKey="StateID" Type="Employees" />
+      <Association Name="States_HomeAddress" Member="HomeAddresses" ThisKey="StateID" OtherKey="StateID" Type="HomeAddress" />
+      <Association Name="States_Suppliers" Member="Suppliers" ThisKey="StateID" OtherKey="StateID" Type="Suppliers" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StylistTimes" Member="StylistTimes">
+    <Type Name="StylistTimes">
+      <Column Name="StylistTimeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeMinutes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employees_StylistTimes" Member="Employees" Storage="_Employee" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employees" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplier" Member="Suppliers">
+    <Type Name="Suppliers">
+      <Column Name="SupplierID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BusinessName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="StateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Suppliers_Products" Member="Products" ThisKey="SupplierID" OtherKey="SupplierID" Type="Products" />
+      <Association Name="Countries_Suppliers" Member="Countries" Storage="_Country" ThisKey="CountryID" OtherKey="CountryID" Type="Countries" IsForeignKey="true" />
+      <Association Name="States_Suppliers" Member="States" Storage="_State" ThisKey="StateID" OtherKey="StateID" Type="States" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transactions" Member="Transactions">
+    <Type Name="Transactions">
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HomeAddressID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Transactions_Transaction_Detail" Member="Transaction_Details" ThisKey="TransactionID" OtherKey="TransactionID" Type="Transaction_Detail" />
+      <Association Name="Employees_Transactions" Member="Employees" ThisKey="EmployeeID" OtherKey="EmployeeID" Type="Employees" IsForeignKey="true" />
+      <Association Name="HomeAddress_Transactions" Member="HomeAddress" ThisKey="HomeAddressID" OtherKey="HomeAddressID" Type="HomeAddress" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Service" Member="ServiceS">
+    <Type Name="ServiceS">
+      <Column Name="ServiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="ServicePrice" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Association Name="ServiceS_Transaction_Detail" Member="Transaction_Details" ThisKey="ServiceID" OtherKey="ServiceID" Type="Transaction_Detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transaction_Details" Member="Transaction_Details">
+    <Type Name="Transaction_Detail">
+      <Column Name="UniqueID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientFirstName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ClientLastName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ServiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceQuantity" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemNo" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductQuantity" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="Products_Transaction_Detail" Member="Products" ThisKey="ProductID,ItemNo" OtherKey="ProductID,ItemNo" Type="Products" IsForeignKey="true" />
+      <Association Name="ServiceS_Transaction_Detail" Member="ServiceS" ThisKey="ServiceID" OtherKey="ServiceID" Type="ServiceS" IsForeignKey="true" />
+      <Association Name="Transactions_Transaction_Detail" Member="Transactions" ThisKey="TransactionID" OtherKey="TransactionID" Type="Transactions" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

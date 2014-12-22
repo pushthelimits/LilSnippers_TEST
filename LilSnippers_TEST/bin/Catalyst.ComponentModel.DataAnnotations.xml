@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Catalyst.ComponentModel.DataAnnotations</name>
+    </assembly>
+    <members>
+        <member name="T:Catalyst.ComponentModel.DataAnnotations.FilterControlMode">
+            <summary>
+            The type of filter to perform.
+            </summary>
+        </member>
+        <member name="F:Catalyst.ComponentModel.DataAnnotations.FilterControlMode.Equals">
+            <summary>
+            Returns true if the parameter value is equal to the property
+            </summary>
+        </member>
+        <member name="F:Catalyst.ComponentModel.DataAnnotations.FilterControlMode.Contains">
+            <summary>
+            Applies to Strings only.  Returns true if the property contains the string in the parameter value
+            </summary>
+        </member>
+        <member name="F:Catalyst.ComponentModel.DataAnnotations.FilterControlMode.Range">
+            <summary>
+            Returns true if the value lies in between the bounds supplied by the parameter value
+            </summary>
+        </member>
+        <member name="F:Catalyst.ComponentModel.DataAnnotations.FilterControlMode.MultiSelect">
+            <summary>
+            Returns true if any of the values provided by the parameter equal the suppled value
+            </summary>
+        </member>
+    </members>
+</doc>

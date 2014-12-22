@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4d3bf5923cc04bd9829c5960bc3128e6" Name="Diagram1">
+        <EntityTypeShape EntityType="LilSnippers_TEST.Client" Width="1.5" PointX="11.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Country" Width="1.5" PointX="3.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Employee" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.EmpPosition" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.HearAbout" Width="1.5" PointX="3.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.HomeAddress" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Medium" Width="1.5" PointX="13" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.MediaType" Width="1.5" PointX="10.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Month1" Width="1.5" PointX="9" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.ParentGuardian" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Product" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.ProductType" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Service" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.State" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.StylistTime" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Supplier" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Transaction_Details" Width="1.5" PointX="10.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LilSnippers_TEST.Transaction" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Client_HomeAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Client_Month" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Supplier_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Employee_EmpPosition" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Employee_State" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_StylistTimes_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Transactions_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_HomeAddress_HearAbout" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_HomeAddress_State" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_ParentGuardian_HomeAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Transactions_HomeAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Media_Media" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Product_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Transaction_Details_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Transaction_Details_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Supplier_State" ManuallyRouted="false" />
+        <AssociationConnector Association="LilSnippers_TEST.FK_Transaction_Details_Transactions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

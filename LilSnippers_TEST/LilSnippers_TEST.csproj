@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{089F873A-CCD7-490B-87B5-E8A946BF8CE5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LilSnippers_TEST</RootNamespace>
+    <AssemblyName>LilSnippers_TEST</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="LilSnippers_TESTConnectionString-Deployment" Order="1" xmlns="">
+          <Destination Path="Data Source=RUBY\SQLEXPRESS%3bInitial Catalog=LilSnippers_TEST%3bIntegrated Security=True" />
+          <Object Type="DbFullSql" Enabled="True">
+            <PreSource Path="Data Source=RUBY\SQLEXPRESS%3bInitial Catalog=LilSnippers_TEST%3bIntegrated Security=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LilSnippers_TESTConnectionString-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LilSnippers_TESTEntities-Deployment" Order="2" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=RUBY\SQLEXPRESS%3bInitial Catalog=LilSnippers_TEST%3bIntegrated Security=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\LilSnippers_TESTEntities-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <PublishDatabases>true</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50508\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Catalyst.ComponentModel.DataAnnotations, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c94a8e7bd0136f96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DynamicData\Catalyst.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Catalyst.Web.DynamicData, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c94a8e7bd0136f96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DynamicData\Catalyst.Web.DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="Catalyst.Web.DynamicData.Design, Version=1.1.0.0, Culture=neutral, PublicKeyToken=c94a8e7bd0136f96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\DynamicData\Catalyst.Web.DynamicData.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.ComponentModel.DataAnnotations">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.Web">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NotAClue.Web.DynamicData">
+      <HintPath>..\packages\NotAClue.DynamicData.Extensions.1.2.1.1\lib\NotAClue.Web.DynamicData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.42.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Selenium.Support.2.42.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutocompleteFilter.asmx.cs">
+      <DependentUpon>AutocompleteFilter.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\LilSnippers.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LilSnippers.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Autocomplete.ascx.cs">
+      <DependentUpon>Autocomplete.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Autocomplete.ascx.designer.cs">
+      <DependentUpon>Autocomplete.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Contains.ascx.cs">
+      <DependentUpon>Contains.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Contains.ascx.designer.cs">
+      <DependentUpon>Contains.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateFrom.ascx.cs">
+      <DependentUpon>DateFrom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateFrom.ascx.designer.cs">
+      <DependentUpon>DateFrom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateRange.ascx.cs">
+      <DependentUpon>DateRange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateRange.ascx.designer.cs">
+      <DependentUpon>DateRange.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateTo.ascx.cs">
+      <DependentUpon>DateTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\DateTo.ascx.designer.cs">
+      <DependentUpon>DateTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\EndsWith.ascx.cs">
+      <DependentUpon>EndsWith.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\EndsWith.ascx.designer.cs">
+      <DependentUpon>EndsWith.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\GreaterThan.ascx.cs">
+      <DependentUpon>GreaterThan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\GreaterThan.ascx.designer.cs">
+      <DependentUpon>GreaterThan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\GreaterThanOrEqualTo.ascx.cs">
+      <DependentUpon>GreaterThanOrEqualTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\GreaterThanOrEqualTo.ascx.designer.cs">
+      <DependentUpon>GreaterThanOrEqualTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\LessThan.ascx.cs">
+      <DependentUpon>LessThan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\LessThan.ascx.designer.cs">
+      <DependentUpon>LessThan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\LessThanOrEqualTo.ascx.cs">
+      <DependentUpon>LessThanOrEqualTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\LessThanOrEqualTo.ascx.designer.cs">
+      <DependentUpon>LessThanOrEqualTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\MultiForeignKey.ascx.cs">
+      <DependentUpon>MultiForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\MultiForeignKey.ascx.designer.cs">
+      <DependentUpon>MultiForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Range.ascx.cs">
+      <DependentUpon>Range.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Range.ascx.designer.cs">
+      <DependentUpon>Range.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\StartsWith.ascx.cs">
+      <DependentUpon>StartsWith.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\StartsWith.ascx.designer.cs">
+      <DependentUpon>StartsWith.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Where.ascx.cs">
+      <DependentUpon>Where.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Where.ascx.designer.cs">
+      <DependentUpon>Where.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\WhereDropdownList.ascx.cs">
+      <DependentUpon>WhereDropdownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\WhereDropdownList.ascx.designer.cs">
+      <DependentUpon>WhereDropdownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpPosition.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HearAbout.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HomeAddress.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LilSnippers_TEST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaType.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medium.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Month1.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParentGuardian.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductType.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="State.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StylistTime.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction_Details.cs">
+      <DependentUpon>LilSnippers_TEST.tt</DependentUpon>
+    </Compile>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutocompleteFilter.asmx" />
+    <Content Include="AutocompleteStyle.css" />
+    <Content Include="Default.aspx" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Filters\Autocomplete.ascx" />
+    <Content Include="DynamicData\Filters\Contains.ascx" />
+    <Content Include="DynamicData\Filters\DateFrom.ascx" />
+    <Content Include="DynamicData\Filters\DateRange.ascx" />
+    <Content Include="DynamicData\Filters\DateTo.ascx" />
+    <Content Include="DynamicData\Filters\EndsWith.ascx" />
+    <Content Include="DynamicData\Filters\GreaterThan.ascx" />
+    <Content Include="DynamicData\Filters\GreaterThanOrEqualTo.ascx" />
+    <Content Include="DynamicData\Filters\LessThan.ascx" />
+    <Content Include="DynamicData\Filters\LessThanOrEqualTo.ascx" />
+    <Content Include="DynamicData\Filters\MultiForeignKey.ascx" />
+    <Content Include="DynamicData\Filters\Range.ascx" />
+    <Content Include="DynamicData\Filters\StartsWith.ascx" />
+    <Content Include="DynamicData\Filters\Where.ascx" />
+    <Content Include="DynamicData\Filters\WhereDropdownList.ascx" />
+    <Content Include="Global.asax" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Content Include="Site.css" />
+    <Content Include="Site.master" />
+    <Compile Include="LilSnippers_TEST.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LilSnippers_TEST.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LilSnippers_TEST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LilSnippers_TEST.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="web.config" />
+    <Content Include="DynamicData\web.config" />
+    <Content Include="DynamicData\Content\GridViewPager.ascx" />
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.designer.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Content\Images\Back.gif" />
+    <Content Include="DynamicData\Content\Images\header_back.gif" />
+    <Content Include="DynamicData\Content\Images\PgFirst.gif" />
+    <Content Include="DynamicData\Content\Images\PgLast.gif" />
+    <Content Include="DynamicData\Content\Images\PgNext.gif" />
+    <Content Include="DynamicData\Content\Images\PgPrev.gif" />
+    <Content Include="DynamicData\Content\Images\plus.gif" />
+    <Content Include="DynamicData\EntityTemplates\Default.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\EntityTemplates\Default_Edit.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.designer.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\EntityTemplates\Default_Insert.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.designer.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\EmailAddress_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress_Edit.ascx.cs">
+      <DependentUpon>EmailAddress_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress_Edit.ascx.designer.cs">
+      <DependentUpon>EmailAddress_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.designer.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.designer.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Filters\Boolean.ascx" />
+    <Compile Include="DynamicData\Filters\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Filters\Enumeration.ascx" />
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Filters\ForeignKey.ascx" />
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Details.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Edit.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Insert.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\List.aspx" />
+    <Compile Include="DynamicData\PageTemplates\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+    </Compile>
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DynamicData\CustomPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="BusinessObjects\LilSnippers.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LilSnippers.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <EntityDeploy Include="LilSnippers_TEST.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LilSnippers_TEST.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="LilSnippers_TEST.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LilSnippers_TEST.edmx</DependentUpon>
+      <LastGenOutput>LilSnippers_TEST.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LilSnippers_TEST.edmx.diagram">
+      <DependentUpon>LilSnippers_TEST.edmx</DependentUpon>
+    </Content>
+    <Content Include="LilSnippers_TEST.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LilSnippers_TEST.edmx</DependentUpon>
+      <LastGenOutput>LilSnippers_TEST.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\LilSnippers.pubxml" />
+    <None Include="Properties\PublishProfiles\LilSnippers_TEST.pubxml" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\LilSnippers.dbml.layout">
+      <DependentUpon>LilSnippers.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49521</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59552/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

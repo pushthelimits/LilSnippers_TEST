@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Catalyst.Web.DynamicData</name>
+    </assembly>
+    <members>
+        <member name="T:Catalyst.Web.DynamicData.FilterTemplateUserControlBase">
+            <summary>
+            Represents the base class for all filter template controls.
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.FilterTemplateUserControlBase.GetWhereParameters(System.Web.DynamicData.IDynamicDataSource)">
+            <summary>
+            Returns the Where Parameters created by the control
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.FilterTemplateUserControlBase.LoadQueryStringParameters(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Loads the control's values from the QueryString
+            </summary>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.FilterTemplateUserControlBase.SaveQueryStringParameters">
+            <summary>
+            Saves the control's values to the QueryString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.FilterTemplateUserControlBase.Clear">
+            <summary>
+            Clears the control's values;
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.ParameterReferenceVisitor">
+            <summary>
+            The ParameterReferenceVisitor is used to map the ParameterExpression which is referenced within the body of the 
+            Lambda to the parameters passed into LambdaExpression method call.
+            </summary>
+        </member>
+        <member name="T:System.Linq.ExpressionVisitor">
+            <summary>
+            In this expression tree visitor implementation, the Visit method, which should be called first, dispatches 
+            the expression it is passed to one of the more specialized visitor methods in the class,  based on the type 
+            of the expression. The specialized visitor methods visit the sub-tree of the expression they are passed. 
+            If a sub-expression changes after it has been visited, for example by an overriding method in a derived class, 
+            the specialized visitor methods create a new expression that includes the changes in the sub-tree. Otherwise, 
+            they return the expression that they were passed. This recursive behavior enables a new expression tree to be 
+            built that either is the same as or a modified version of the original expression that was passed to Visit.
+            <seealso cref="!:http://msdn.microsoft.com/en-us/library/bb882521.aspx"/>
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.InExpressionParameter">
+            <summary>
+            A parameter responsible for creating a LambdaExpression that performs an 'in' comparisson.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicExpressionParameterBase">
+            <summary>
+            The DynamicExpressionParameterBase extends System.Web.UI.WebControls.Parameter to provide the ability to generate complex
+            LambdaExpressions that provided filtering capability beyond simple equality.
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.IDynamicExpressionParameter.GetLambdaExpression(System.Type)">
+            <summary>
+            The method responsible for building a LambdaExpression to be evaluated against the target object.
+            </summary>
+            <param name="itType">The type of object the LambdaExpression is evaluated against.</param>
+            <returns>The LambdaExpression.</returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.IDynamicExpressionParameter.AppendQuery(System.Linq.IQueryable)">
+            <summary>
+            This appends the LambdaExpression returned by GetLambdaExpression to the IQueryable provided.
+            </summary>
+            <param name="query">The Query to append the LambdaExpression with.</param>
+            <returns>The combined IQueryable of query and GetLambdaExpression.</returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicExpressionParameterBase.GetLambdaExpression(System.Type)">
+            <summary>
+            The abstract method responsible for building a LambdaExpression to be evaluated against the target object.
+            </summary>
+            <param name="itType">The type of object the LambdaExpression is evaluated against.</param>
+            <returns>The LambdaExpression.</returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicExpressionParameterBase.AppendQuery(System.Linq.IQueryable)">
+            <summary>
+            The defafult implementation of AppendQuery is to call the Queryable.Where extension method.  This appends the
+            LambdaExpression returned by GetLambdaExpression to the IQueryable provided.
+            </summary>
+            <param name="query">The Query to append the LambdaExpression with.</param>
+            <returns>The combined IQueryable of query and GetLambdaExpression.</returns>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.EqualsFilterUserControlBase">
+            <summary>
+            The base class used by UserControls that implements an equality comparisson. 
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.InFilterUserControlBase">
+            <summary>
+            The base class used by UserControls that implements an 'in' comparisson. 
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.RangeExpressionParameter">
+            <summary>
+            A parameter responsible for creating a LambdaExpression that performs a range comparisson.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.NotNullOrEmptyParameter">
+            <summary>
+             A parameter responsible for creating a LambdaExpression that compares the value to null or if a String performs String.IsNullOrEmpty().
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicFilterControl">
+            <summary>
+            Displays the content that is defined for the filter in templated data-bound controls, using ASP.NET Dynamic Data features.
+            </summary>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.DynamicFilterControl.Mode">
+            <summary>
+            Hide Mode from designer, it is irrelevant here
+            </summary>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.DynamicFilterControl.FilterMode">
+            <summary>
+            The FilterMode used for this control.  This helps determines the type of FilterUserControl that is rendered.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.EqualsExpressionParameter">
+            <summary>
+            A parameter responsible for creating a LambdaExpression that performs equality.
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.EqualsExpressionParameter.GetLambdaExpression(System.Type)">
+            <summary>
+            Dynamically creates a LambdaExpression that compares the Value to the Property defined by Name
+            </summary>
+            <param name="itType">The type of object the LambdaExpression is evaluated against.</param>
+            <returns>A LambdaExpression that creates an Equals Expression</returns>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.EqualsExpressionParameter.ValueType">
+            <summary>
+            The type of the value to be comparred against
+            </summary>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.EqualsExpressionParameter.Value">
+            <summary>
+            The string representation of the value
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicLinqDataSource">
+            <summary>
+            Enables the LinqDataSource to accpet where predicates to create complex queries.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.IPredicateDynamicDataSource">
+            <summary>
+            Defines the implementation of WherePredicatePrameters property.
+            </summary>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.IPredicateDynamicDataSource.WherePredicateParameters">
+            <summary>
+            Stores Parameters which are used to create a predicate expression for the where clause of the LINQ expression.
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSource.CreateView">
+            <summary>
+            Overrides the default CreateView to return a DynamicLinqDataSourceView as opposed to a LinqDataSourceView
+            Thank you David Ebbo, Scott Hunter, and Marcin Dobosz of the ASP.NET Dynamic Data team!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.DynamicLinqDataSource.WherePredicateParameters">
+            <summary>
+            Gets a collection of parameters that are used to create the Where predicate.
+            </summary>
+            <returns>
+            A collection that contains the parameters that are used to generate the where predicate.
+            </returns>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicLinqDataSourceView">
+            <summary>
+            The DynamicLinqDataSourceView extends the LinqDataSourceView to add the ability to create complex
+            where predicates.  
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.WherePredicateParameters_ParametersChanged(System.Object,System.EventArgs)">
+            <summary>
+            Hack required to set wherePredicateParameters collection to dirty.
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.LoadViewState(System.Object)">
+            <summary>
+            Override LoadViewState to include WherePredicateParameters in ViewState deserialization
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.SaveViewState">
+            <summary>
+            Override SaveViewState to include WherePredicateParameters in ViewState serialization
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.TrackViewState">
+            <summary>
+            Override TrackViewState to include Tracking on WherePredicateParameters
+            </summary>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.OnSelecting(System.Web.UI.WebControls.LinqDataSourceSelectEventArgs)">
+            <summary>
+            Overrides default select logic to add WherePredicateParameters to the LINQ expression.
+            </summary>
+            <param name="e">The LinqDataSourceSelectEventArgs provided by the LinqDataSource</param>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.DynamicLinqDataSourceView.WherePredicateParameters">
+            <summary>
+            Gets a collection of parameters that are used to create the Where predicate.
+            </summary>
+            <returns>
+            A collection that contains the parameters that are used to generate the where predicate.
+            </returns>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicParameterCollection">
+            <summary>
+            Extends ParameterCollection to allow the use of extended Parameters.  Currently the 
+            DynamicParameterCollection is limited to the following parameters:
+                System.Web.UI.WebControls.Parameter
+                System.Web.UI.WebControls.ControlParameter
+                System.Web.UI.WebControls.CookieParameter
+                System.Web.UI.WebControls.FormParameter
+                System.Web.UI.WebControls.ProfileParameter
+                System.Web.UI.WebControls.QueryStringParameter
+                System.Web.UI.WebControls.SessionParameter
+                Catalyst.Web.DynamicData.AndExpressionParameter
+                Catalyst.Web.DynamicData.OrExpressionParameter
+                Catalyst.Web.DynamicData.InExpressionParameter
+                Catalyst.Web.DynamicData.LikeExpressionParameter
+                Catalyst.Web.DynamicData.RangeExpressionParameter
+                Catalyst.Web.DynamicData.EqualsExpressionParameter
+                Catalyst.Web.DynamicData.NotNullOrEmptyParameter
+            This class should be modified to accept any object that extends Parameter.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.CompositeExpressionParameterBase">
+            <summary>
+            A CompositeExpressionParameter is a parameter that contains a collection of parameters which are evaluated together.  An example
+            of this is either a boolean AND or OR operation.  CompositeExpressionParameters store these sub parameters in the Parameters property.
+            If the parameter within the Parameters property implements IDynamicExpressionParameter the LambdaExpression returned by GetLambdaExpression()
+            will be used during evalution; otherwise a Lambda Expression will be dynamically created to preform an equality check.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Catalyst.Web.DynamicData.CompositeExpressionParameterBase.CleanParameterValues(System.Collections.Specialized.IOrderedDictionary)" -->
+        <member name="M:Catalyst.Web.DynamicData.CompositeExpressionParameterBase.GetLambdaExpression(System.Type)">
+            <summary>
+            Returns a LambdaExpression which combines the Parameters contained in the Parameters property.  
+            This method depends on the BuildBody to construct the the logic performed in the LambdaExpression's body.
+            </summary>
+            <param name="itType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalyst.Web.DynamicData.CompositeExpressionParameterBase.BuildBody(System.Collections.Generic.List{System.Linq.Expressions.LambdaExpression})">
+            <summary>
+            This must be implemented to construct the LambdaExpression's Body Expression.  A simple example of this is to 
+            construct a binary tree for evaluting AND logic.
+            </summary>
+            <param name="lambdas">The collection of LambdaExpressions constrcuted form the Parameters property.</param>
+            <returns>A single expression which combines the lambdas.</returns>
+        </member>
+        <member name="P:Catalyst.Web.DynamicData.CompositeExpressionParameterBase.Parameters">
+            <summary>
+            ContainedParameters are stored in this property.  
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.AndExpressionParameter">
+            <summary>
+            AndExpressionParameter evalutes a boolean AND operation against all parameters defined in the Parameters property.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.RangeFilterUserControlBase">
+            <summary>
+            The base class used by UserControls that implements a range comparisson. 
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.LikeFilterUserControlBase">
+            <summary>
+            The base class used by UserControls that implements a like comparisson. 
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.OrExpressionParameter">
+            <summary>
+            OrExpressionParameter evalutes a boolean OR operation against all parameters defined in the Parameters property.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.FilterTemplateFactory">
+            <summary>
+            The factory is responsible for loading the correct FilterUserControlBase based on Type, RenderUIHint, and FilterControlMode.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.LikeExpressionParameter">
+            <summary>
+            A parameter responsible for creating a LambdaExpression that performs a like comparisson on strings.
+            </summary>
+        </member>
+        <member name="T:Catalyst.Web.DynamicData.DynamicFilterForm">
+            <summary>
+            The DynamicFilterForm is the container for the DynamicFilterControls.  The DynamicFilterForm will add Parameters to the 
+            WherePredicateParameters property of a DataSource which implements IPredicateDynamicDataSource. 
+            </summary>
+        </member>
+    </members>
+</doc>
